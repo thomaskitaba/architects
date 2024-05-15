@@ -1,8 +1,8 @@
 
 :root {
-  --bg-primary-light: #fdfdfd;
+  --bg-primary-light: #ffffff;
   --bg-primary-middle: #f5f5f5;
-  --bg-primary-dark: #e5e5e5;
+  --bg-primary-dark: #c9c6c6;
 
   --bg-primary-red-light: #f37b85;
   --bg-primary-red-middle: #f85659;
@@ -13,122 +13,71 @@
   --txt-primary-dark: #1a1a1a;
 
 }
-#root {
-  max-width: 1280px;
+#root{
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0rem;
   text-align: center;
 }
+
 /******* General ******* */
-*, * ::before , * ::after {
-  box-sizing: border-box;
+body {
   margin: 0;
   padding: 0;
+  --txt-primary-dark: #1a1a1a;
+}
+*, * ::before , * ::after {
+  box-sizing: border-box;
+
 }
 .flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
+.contact-containter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form, .contact-note {
+  flex-basis: 1;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
 
 }
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .flex {
     flex-direction: row;
   }
 }
 
-/*********** FOOTER *************/
-.footer-container, .final-words {
-  display: flex;
-  justify-content: center;
-  /* background: linear-gradient(90.21deg, var(--bg-primary-middle) -5.91%, var(--bg-primary-dark) 111.58%); */
-
-  /* background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); */
-  color: var(--txt-primary-light);
-  /* border-top: 5px solid white; */
-}
-
-.footer-content{
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-width: 100px;
-  /* border: 2px solid yellow; */
-  width: 100%;
-  flex: 1;
-}
-
-.footer-right, .footer-left {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  /* border: 2px solid white; */
-}
-@media(min-width: 767px) {
-  .footer-content {
-    flex-direction: row;
-  }
-  .footer-right, .footer-left {
-    flex-direction: row;
-  }
-}
-.footer-right ul li, .footer-left ul li{
-  list-style: none;
-  font-size: 0.75rem;
-}
-.footer-contact-info , .footer-information , .footer-copyright-info , .footer-social-media-links {
-  flex: 1;
-}
-.footer-contact-info ul, .footer-information ul, .footer-copyright-info ul, .footer-social-media-links ul{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1;
-  cursor: hand;
-  /* border: 2px dashed yellow;  */
-  height: 100%;
-}
-.footer-contact-info ul li:first-child, .footer-information ul li:first-child, .footer-copyright-info ul li:first-child, .footer-social-media-links ul li:first-child{
-  text-decoration: underline;
-}
- .footer-information ul li:not(:first-child), .footer-social-media-links ul li:not(:first-child){
-  cursor: pointer;
-}
-.footer-header-text {
-  font-size: 1rpm;
-}
-.final-words {
-  font-size: 0.75rem;
-}
-
 /************ Contact Css ************/
-section {
-  width: 100%;
-}
+
 .contact {
   background: linear-gradient(90.21deg, var(--bg-primary-middle) -5.91%, var(--bg-primary-dark) 111.58%);
-  padding: 60px 0 200px 0;
-  width: 100%;
-}
-.contact img {
-  width: 92%;
+  padding:10px;
+  width: 100vw;
 }
 
+
 .contact-paragraph {
+
   background: var(--bg-primary-red-light);
   border: 1px solid var(--bg-primary-red-dark);
   border-radius: 20px;
   padding: 30px;
   margin-bottom: 20px;
-  color: var(--txt-primary-light);
+  color: var(--txt-primary-black);
   display: flex;
   flex-direction:column;
   box-shadow: 1px 1px 3px black;
@@ -161,18 +110,21 @@ section {
   margin-bottom: 30px;
 }
 
-.contact form input, .contact form textarea {
+.contact form input, .contact form textarea{
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  color: var(--txt-primary-light);
+  color: var(--txt-primary-black);
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
+}
+.contact .contact-form textarea {
+  width: 500px;
 }
 .contact form input:focus, .contact form textarea:focus {
   background: rgba(255, 255, 255, 1);

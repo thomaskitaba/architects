@@ -88,11 +88,11 @@ return (
 //     </div>
 //   </div>
 // </Container>
-
+<Container>
   <div className="contact" id="connect">
     <div>
-      <div className="align-items-center flex">
-        <div >
+      <div className="align-items-center flex md={6}">
+        <div className="contact-note">
           {/* {screenSize > 768 ? <img src={Chief} alt="Contact image Chief standing" /> : <img src={Chief2} alt="Contact image Chief standing" />} */}
           <div className='contact-paragraph'>
             <h3>Our team of experienced consultants can assist you with:</h3>
@@ -111,7 +111,7 @@ return (
           </div>
           </div>
         </div>
-        <div >
+        <div className="contact-form">
           <h1>Let's Connect</h1>
           <form onSubmit={handelFormSubmit} className="forms" >
             <div className="px-1">
@@ -145,6 +145,7 @@ return (
       </div>
     </div>
   </div>
+  </Container>
 )
 }
 
